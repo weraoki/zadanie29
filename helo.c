@@ -1,30 +1,26 @@
-/* zadanie 26 */
-
- 
-
 #include <stdio.h>
 
- 
-
 int main() {
-    unsigned int liczba_wierszy, liczba_znakow, w, k;
-    
-    printf("Podaj liczbe wierszy: ");
-    scanf("%d", &liczba_wierszy);
-    
-    printf("Podaj liczbe znaków w wierszu: ");
-    scanf("%d", &liczba_znakow);
 
- 
+unsigned int liczba_wierszy, liczba_znakow, wiersz, kolumna;
+char znak;
 
-    for(w = 1; w <= liczba_wierszy; w++) {
-        for(k = 1; k <= liczba_znakow; k++)
-            printf("*");
+printf("Podaj liczbe wierszy: ");
+scanf("%d", &liczba_wierszy);
 
- 
+printf("Podaj liczbe znakow: ");
+scanf("%d", &liczba_znakow);
 
-        printf("\n");
+printf("Podaj dowolny znak: ");
+scanf(" %c", &znak);
+
+printf("\n");
+
+for (wiersz = 1; wiersz <= liczba_wierszy; wiersz++) {
+    for (kolumna = 1; kolumna <= liczba_znakow; kolumna++){
+        printf("%c", znak);
     }
-        
-    return 0;
+    printf("\n");
+    }
+return 0;
 }
